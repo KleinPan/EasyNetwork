@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EasyNetwork\EasyNetwork.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="One.AutoUpdater">
+      <HintPath>..\..\..\Github\One\One.AutoUpdater\bin\Debug\netcoreapp3.1\One.AutoUpdater.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
