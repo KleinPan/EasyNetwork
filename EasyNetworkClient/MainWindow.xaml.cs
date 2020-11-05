@@ -1,17 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+
 using EasyNetwork.Connections;
 using EasyNetwork.Converter;
 using EasyNetwork.GlobalData.Enums;
@@ -19,13 +8,12 @@ using EasyNetwork.TCP;
 
 namespace EasyNetwork
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+    /// <summary> Interaction logic for MainWindow.xaml </summary>
     public partial class MainWindow : Window
     {
-        ConnectionResult connectionResult;
-        TcpConnection tcpConnection;
+        private ConnectionResult connectionResult;
+        private TcpConnection tcpConnection;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -33,11 +21,8 @@ namespace EasyNetwork
             Init();
         }
 
-
         private void Init()
         {
-
-
             connectionResult = ConnectionResult.TCPConnectionNotAlive;
             //1. Establish a connection to the server.
             tcpConnection = ConnectionFactory.CreateTcpConnection("172.16.40.19", 1234, out connectionResult);
@@ -64,7 +49,6 @@ namespace EasyNetwork
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-
         }
     }
 }
